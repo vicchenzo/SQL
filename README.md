@@ -1,2 +1,2 @@
 # SQLServer
-Curso de SQLServer Hashtag Treinamentos
+Aprendizado na ferramenta SQLServer
