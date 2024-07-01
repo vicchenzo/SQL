@@ -7,11 +7,11 @@ FROM
 ORDER BY
 	UnitPrice DESC
 
--- QUANTOS PRODUTOS TEM UM PREÇO UNITARIO MAIOR QUE $1000
+-- QUANTOS PRODUTOS TEM UM PREÃ‡O UNITARIO MAIOR QUE $1000
 
 SELECT
 	ProductName AS 'Produto',
-	unitprice AS 'Preço'
+	unitprice AS 'PreÃ§o'
 FROM
 	DimProduct
 WHERE
