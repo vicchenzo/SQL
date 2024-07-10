@@ -6,7 +6,7 @@ SELECT
 	COUNT(BrandName) AS 'Qtd. Produtos'
 FROM
 	DimProduct
-GROUP BY	BrandName
+GROUP BY BrandName
 
 -- B. Determine a média do preço unitário (UnitPrice) para cada ClassName. 
 SELECT
@@ -14,7 +14,7 @@ SELECT
 	AVG(UnitPrice) AS 'Média Preço'
 FROM
 	DimProduct
-GROUP BY	ClassName
+GROUP BY ClassName
 
 --C. Faça um agrupamento de cores e descubra o peso total que cada cor de produto possui. 
 SELECT
@@ -22,4 +22,4 @@ SELECT
 	SUM(Weight) AS 'Peso'
 FROM
 	DimProduct
-GROUP BY	ColorName
+GROUP BY ColorName
