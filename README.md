@@ -2,7 +2,7 @@
 Using Contoso Database for researchers and studying.
 
 ## Uso de ORDER BY | Using ORDER BY
-#### 001. Selecionar o TOP10 Produtos Ordenado pela coluna de PreçoUnitário
+#### 001. Selecionar TOP10 Produtos Ordenado pela coluna de PreçoUnitário
 #### 001. Selecting TOP10 products by the Order by UnitPrice column
 ``` sql
 SELECT TOP (10)
