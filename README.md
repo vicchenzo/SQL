@@ -1,7 +1,7 @@
 # SQL | CONOTOSO DATABASE
 Using Contoso Database for researchers and studying.
 
-## Uso de ORDER BY no DATABASE CONTOSO
+## Uso de ORDER BY
 ``` sql
 SELECT * FROM DimProduct
 
@@ -21,3 +21,4 @@ FROM
 	DimProduct
 WHERE
 	UnitPrice >= 1000
+```
