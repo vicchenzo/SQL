@@ -1,2 +1,2 @@
 # SQL
-Aprendizado na ferramenta SQLServer usando banco de dados CONTOSO: https://abrir.link/qGBzS
+Using Contoso Database for researchers and studying.
