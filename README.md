@@ -14,8 +14,7 @@ ORDER BY
 ```
 ### Objective: #### 
 Identify the most frequently occurring rating for each type of content.
-*Objective:* Identify the most frequently occurring rating for each type of content.
-**Objective:** Identify the most frequently occurring rating for each type of content.
+*Objective:* Identify the most frequently occurring rating for each type of content.t.
 
 
 
