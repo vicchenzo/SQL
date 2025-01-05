@@ -12,7 +12,8 @@ FROM
 ORDER BY
 	UnitPrice DESC
 ```
-#### Obejetctive: #### SELECIONAR TOP10 PRODUTOS ORDENADO PELA COLUNA UNITPRICE
+#### #### Objective: #### Identify the most frequently occurring rating for each type of content.
+
 
 #### 002. QUANTOS PRODUTOS TEM O PREÇO UNITÁRIO > $1000
 ```sql
