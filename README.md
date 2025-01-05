@@ -12,7 +12,7 @@ FROM
 ORDER BY
 	UnitPrice DESC
 ```
-*Objective:* Identify the most frequently occurring rating for each type of content.t.
+-> *Resuming the code identify the most frequently occurring rating for each type of content*
 
 
 
