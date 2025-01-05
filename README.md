@@ -12,7 +12,7 @@ FROM
 ORDER BY
 	UnitPrice DESC
 ```
-#### #### Objective: #### Identify the most frequently occurring rating for each type of content.
+** Objective: **  Identify the most frequently occurring rating for each type of content.
 
 
 #### 002. QUANTOS PRODUTOS TEM O PREÇO UNITÁRIO > $1000
