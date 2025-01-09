@@ -1,5 +1,5 @@
 # SQL | ᴄᴏɴᴛᴏsᴏ ᴅᴀᴛᴀʙᴀsᴇ
-Resolvendo problemas do Banco de dados CONTOSO
+ᴇxᴇʀᴄɪᴄɪᴏs ᴀʙᴀɪxᴏ ᴘᴏᴅᴇ sᴇʀ ʙᴀɪxᴀᴅᴏ ᴇᴍ ᴘᴅғ ᴘᴇʟᴏ ʟɪɴᴋ
 
 # ɴɪᴠᴇʟ ɪ.
 ## ᴜsᴀɴᴅᴏ ᴏʀᴅᴇʀ ʙʏ
