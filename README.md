@@ -1,16 +1,18 @@
 # SQL | CONOTOSO DATABASE
-Using Contoso Database for researchers and studying.
+Resolvendo problemas do Banco de dados CONTOSO
 
 ## Uso de ORDER BY | Using ORDER BY
-#### 001. SELECIONAR O TOP10 PRODUTOS PELA COLUNA DE PREÇO UNITÁRIO
-#### 001. SELECTING TOP10 PRODUCTS BY THE UNITPRICE COLUMN
+#### 001. Você é o gerente da área de compras e precisa criar um relatório com as TOP 100 vendas, de 
+acordo com a quantidade vendida. Você precisa fazer isso em 10min pois o diretor de compras 
+solicitou essa informação para apresentar em uma reunião. 
+Utilize seu conhecimento em SQL para buscar essas TOP 100 vendas, de acordo com o total 
+vendido (SalesAmount).*/
 ``` sql
-SELECT TOP (10)
-	UnitPrice
-FROM 
-	DimProduct
-ORDER BY
-	UnitPrice DESC
+USE ContosoRetailDW
+
+SELECT TOP (100) *
+FROM FactSales
+ORDER BY SalesQuantity DESC
 ```
 -> *Resuming the code identify the most frequently occurring rating for each type of content*
 
