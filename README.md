@@ -30,7 +30,9 @@ Os produtos da categoria A, com peso acima de 100kg, deverão ser transportados 
 Faça uma consulta no banco de dados para descobrir quais são estes produtos que estão na categoria A. 
 
 *a) Você deverá retornar apenas 2 colunas nessa consulta: Nome do Produto e Peso. 
-b) Renomeie essas colunas com nomes mais intuitivos. 
+
+b) Renomeie essas colunas com nomes mais intuitivos.
+
 c) Ordene esses produtos do mais pesado para o mais leve.*
 
 ```sql
