@@ -1,5 +1,5 @@
 # SQL | ᴄᴏɴᴛᴏsᴏ ᴅᴀᴛᴀʙᴀsᴇ
-ᴇxᴇʀᴄɪᴄɪᴏs ᴀʙᴀɪxᴏ ᴘᴏᴅᴇᴍ sᴇʀ ʙᴀɪxᴀᴅᴏ ᴇᴍ ᴘᴅғ ᴘᴇʟᴏ [ʟɪɴᴋ](https://github.com/vicchenzo/SQL/blob/main/007_008.%20Explica%C3%A7%C3%A3o%20dos%20exerc%C3%ADcios.sql)
+ʟɪɴᴋ ᴏғ ᴛʜᴇ  [ᴇxᴇʀᴄɪsᴇs](https://github.com/vicchenzo/SQL/blob/main/007_008.%20Explica%C3%A7%C3%A3o%20dos%20exerc%C3%ADcios.sql) ɪɴ ᴘᴅғ
 
 # ɴɪᴠᴇʟ ʙᴀsɪᴄᴏ.
 ## ᴜsᴀɴᴅᴏ ᴏʀᴅᴇʀ ʙʏ
