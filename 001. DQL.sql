@@ -69,7 +69,7 @@ FROM DimProduct
 GROUP BY BrandName
 HAVING COUNT(BrandName) >= 200
 
--- 005.GROUP + ORDER BY
+-- 005.GROUP BY + ORDER BY
 SELECT * FROM DimStore
 
 SELECT
