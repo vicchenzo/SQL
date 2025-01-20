@@ -59,7 +59,7 @@ SELECT *
 FROM DimProduct
 WHERE ColorName = 'Black'
 
--- PARTE IV. ORDER BY + HAVING
+-- 004. ORDER BY + HAVING
 SELECT * FROM DimProduct
 
 SELECT
@@ -68,3 +68,28 @@ SELECT
 FROM DimProduct
 GROUP BY BrandName
 HAVING COUNT(BrandName) >= 200
+
+-- 005.GROUP + ORDER BY
+SELECT * FROM DimStore
+
+SELECT
+	StoreType,
+	SUM(EmployeeCount) AS 'Quantidade'
+FROM
+	DimStore
+GROUP BY
+	StoreType
+ORDER BY -- DESSA FORMA ESTÁ SENDO ORDENADO DE FORMA ALFABÉTICA
+	StoreType DESC
+
+-- DESSA FORMA USAMOS COMO CRITÉRIO DE ORDENAÇÃO A SOMA DE DA COLUNA EmployeeCount
+SELECT
+	StoreType,
+	SUM(EmployeeCount) AS 'Quantidade'
+FROM
+	DimStore
+GROUP BY
+	StoreType
+ORDER BY
+	SUM(EmployeeCount) DESC
+
