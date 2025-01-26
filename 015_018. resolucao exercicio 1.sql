@@ -1,10 +1,9 @@
 /* 
-1. Para fins fiscais, a contabilidade da empresa precisa de uma tabela contendo todas as vendas 
-referentes à loja ‘Contoso Orlando Store’. Isso porque essa loja encontra-se em uma região onde 
-a tributação foi modificada recente.
+1. ᴘᴀʀᴀ ғɪɴs ғɪsᴄᴀɪs, ᴀ ᴄᴏɴᴛᴀʙɪʟɪᴅᴀᴅᴇ ᴅᴀ ᴇᴍᴘʀᴇsᴀ ᴘʀᴇᴄɪsᴀ ᴅᴇ ᴜᴍᴀ ᴛᴀʙᴇʟᴀ ᴄᴏɴᴛᴇɴᴅᴏ ᴛᴏᴅᴀs ᴀs ᴠᴇɴᴅᴀs 
+ʀᴇғᴇʀᴇɴᴛᴇs ᴀ ʟᴏᴊᴀ ‘ᴄᴏɴᴛᴏsᴏ ᴏʀʟᴀɴᴅᴏ sᴛᴏʀᴇ’. ɪssᴏ ᴘᴏʀᴏ̨ᴜᴇ ᴇssᴀ ʟᴏᴊᴀ ᴇɴᴄᴏɴᴛʀᴀ-sᴇ ᴇᴍ ᴜᴍᴀ ʀᴇɢɪᴀ̃ᴏ ᴏɴᴅᴇ 
+ᴀ ᴛʀɪʙᴜᴛᴀᴄ̧ᴀᴏ ғᴏɪ ᴍᴏᴅɪғɪᴄᴀᴅᴀ ʀᴇᴄᴇɴᴛᴇ.
 
-Portanto, crie uma consulta ao Banco de Dados para obter uma tabela FactSales contendo todas 
-as vendas desta loja
+ᴘᴏʀᴛᴀɴᴛᴏ, ᴄʀɪᴇ ᴜᴍᴀ ᴄᴏɴsᴜʟᴛᴀ ᴀᴏ ʙᴀɴᴄᴏ ᴅᴇ ᴅᴀᴅᴏs ᴘᴀʀᴀ ᴏʙᴛᴇʀ ᴜᴍᴀ ᴛᴀʙᴇʟᴀ ғᴀᴄᴛsᴀʟᴇs ᴄᴏɴᴛᴇɴᴅᴏ ᴛᴏᴅᴀs ᴀs ᴠᴇɴᴅᴀs ᴅᴇsᴛᴀ ʟᴏᴊᴀ
 */
 
 SELECT * FROM FactSales
