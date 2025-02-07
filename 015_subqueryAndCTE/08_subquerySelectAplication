@@ -1,8 +1,8 @@
--- [SQL Server] [Subqueries e CTE's] Aula 9 de 28: Subquery na pr·tica - AplicaÁ„o com o SELECT
+-- [SQL Server] [Subqueries e CTE's] Aula 9 de 28: Subquery na pr√°tica - Aplica√ß√£o com o SELECT
 
--- Exemplo: Retornar uma tabela com todos os produtos (ID Produto e Nome Produto) e tambÈm o total de vendas para cada produto
+-- Exemplo: Retornar uma tabela com todos os produtos (ID Produto e Nome Produto) e tamb√©m o total de vendas para cada produto
 
--- Ser· trazida a contagem considerando que o ProductKey da FactSales seja igual ProductKey da DimProduct
+-- Ser√° trazida a contagem considerando que o ProductKey da FactSales seja igual ProductKey da DimProduct
 -- Para cada um dos produtos [ProductKey] qual foi a quantidade de vendas para cada um deles;
 -- Sendo considerado que o Produto da FactSales tem que ser igual Produto da DimProduct
 SELECT
