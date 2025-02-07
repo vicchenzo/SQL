@@ -1,7 +1,7 @@
 -- [SQL Server] [Subqueries e CTE's] Aulas 7 e 8 de 28: EXISTS
 
 -- Exemplo: Retornar uma tabela com todos os produtos (ID Produto e Nome Produto) que possuem alguma venda no dia 01/01/2007
--- Tabela que vai identificar as informações de vendas: FactSales
+-- Tabela que vai identificar as informaÃ§Ãµes de vendas: FactSales
 
 SELECT * FROM DimProduct
 
@@ -24,10 +24,10 @@ WHERE EXISTS(
 		factSales
 	WHERE
 		DateKey = '01/01/2007'
-		--AND factSales.ProductKey = DimProduct.ProductKey -- Verificamos se o ID do produto da FactSales é igual ID do produto na DimProduct
+		--AND factSales.ProductKey = DimProduct.ProductKey -- Verificamos se o ID do produto da FactSales Ã© igual ID do produto na DimProduct
 		)
 
--- Solução alternativa com o ANY
+-- SoluÃ§Ã£o alternativa com o ANY
 
 SELECT
 	ProductKey,
