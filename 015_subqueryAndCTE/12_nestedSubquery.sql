@@ -1,6 +1,6 @@
 -- [SQL Server] [Subqueries e CTE's] Aula 13 de 28: Subquery aninhada
 
--- Exemplo: Descubra os nomes dos clientes que ganham o segundo maior sal·rio.
+-- Exemplo: Descubra os nomes dos clientes que ganham o segundo maior sal√°rio.
 
 SELECT * FROM DimCustomer
 WHERE CustomerType = 'Person'
@@ -19,9 +19,9 @@ FROM DimCustomer
 WHERE YearlyIncome = 160000
 
 
---1. Descobrir o maior sal·rio
---2. Descobrir o segundo maior sal·rio
---3. Descobrir os nomes dos clientes que ganham o segundo maior sal·rio
+--1. Descobrir o maior sal√°rio
+--2. Descobrir o segundo maior sal√°rio
+--3. Descobrir os nomes dos clientes que ganham o segundo maior sal√°rio
 
 
 
@@ -44,4 +44,4 @@ WHERE YearlyIncome = (
 	)
 )
 -- A SubQuery MAIS INTERNA VAI RETORNAR O 170,000 [MaiorValor]
--- QUANDO EXECUTAMOS SOMENTE A PRIMEIRA E A SEGUNDA SubQuery SER¡ RETORNADO O SEGUNDO MAIOR VALOR
+-- QUANDO EXECUTAMOS SOMENTE A PRIMEIRA E A SEGUNDA SubQuery SER√Å RETORNADO O SEGUNDO MAIOR VALOR
