@@ -20,7 +20,7 @@ Este repositório contém diversos scripts SQL desenvolvidos para o Microsoft SQ
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/vicchenzo/sql.git
    ```
 2. Acesse a pasta desejada e abra o arquivo `.sql` correspondente.
 3. Execute o script no SQL Server Management Studio ou outra ferramenta SQL.
