@@ -1,16 +1,16 @@
-/* Exercício 5
-A ação de desconto da Asian Holiday Promotion foi uma das mais bem sucedidas da empresa. 
+/* ExercÃ­cio 5
+A aÃ§Ã£o de desconto da Asian Holiday Promotion foi uma das mais bem sucedidas da empresa. 
 Agora, a Contoso quer entender um pouco melhor sobre o perfil dos clientes que compraram 
-produtos com essa promoção */
+produtos com essa promoÃ§Ã£o */
 
--- Seu trabalho é criar uma query que retorne a lista de clientes que compraram nessa promoção
+-- Seu trabalho Ã© criar uma query que retorne a lista de clientes que compraram nessa promoÃ§Ã£o
 
--- 1° Descobrir qual é o ID da promoção 'Asian Holiday Promotion'
+-- 1Â° Descobrir qual Ã© o ID da promoÃ§Ã£o 'Asian Holiday Promotion'
 SELECT PromotionKey 
 FROM DimPromotion 
 WHERE PromotionName = 'Asian Holiday Promotion' --PromotionKey: 5, 14, 23 
 
--- 2° Descobrir os ID's dos clientes que compraram com essa promoção
+-- 2Â° Descobrir os ID's dos clientes que compraram com essa promoÃ§Ã£o
 SELECT 	CustomerKey
 FROM FactOnlineSales
 WHERE PromotionKey IN (
@@ -19,7 +19,7 @@ WHERE PromotionKey IN (
 				WHERE PromotionName = 'Asian Holiday Promotion'
 				)
 
--- 3° Descobrir as informações desses clientes
+-- 3Â° Descobrir as informaÃ§Ãµes desses clientes
 SELECT *
 FROM DimCustomer
 WHERE CustomerKey IN (
