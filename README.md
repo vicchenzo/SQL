@@ -1,109 +1,45 @@
-# SQL | ᴄᴏɴᴛᴏsᴏ ᴅᴀᴛᴀʙᴀsᴇ
-ʟɪɴᴋ ᴏғ ᴛʜᴇ  [ᴇxᴇʀᴄɪsᴇs](https://github.com/vicchenzo/SQL/blob/main/007_008.%20Explica%C3%A7%C3%A3o%20dos%20exerc%C3%ADcios.sql) ɪɴ ᴘᴅғ
+# 📌 SQL Server Scripts Repository
 
-# ʙᴀsɪᴄ ʟᴇᴠᴇʟ.
-## ᴜsɪɴɢ ᴏʀᴅᴇʀ ʙʏ
-#### ʀᴇsᴏʟᴜᴛɪᴏɴ ɪ. 
-``` sql
-/* ʏᴏᴜ ᴀʀᴇ ᴀ ᴍᴀɴᴀɢᴇʀ sᴀʟᴇs ᴏғ ᴀ ᴄᴏᴍᴘᴀɴʏ ᴀɴᴅ ɴᴇᴇᴅ ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴀ ᴛᴏᴘ 100 ᴏғ sᴀʟᴇs,
-ᴀᴄᴄᴏʀᴅɪɴɢ ᴡɪᴛʜ ᴀ sᴀʟᴇs ᴏ̨ᴜᴀɴᴛɪᴛʏ, ʏᴏᴜ ɴᴇᴇᴅ ᴅᴏ ᴛʜɪs ɪɴ ᴛᴇɴ ᴍɪɴᴜᴛᴇs ғᴏʀ sʜᴏᴡɪɴɢ ɪɴ ᴀ ʀᴇᴜɴɪᴏɴ.
-ᴜsᴇ ʏᴏᴜʀ ᴋɴᴏᴡʟᴇᴅɢᴇ ɪɴ sᴏ̨ʟ ғᴏʀ ʙʀɪɴɢ ᴛʜɪs ᴛᴏᴘ 100 sᴀʟᴇs, ᴀᴄᴄᴏʀᴅɪɴɢ ᴀᴛ sᴀʟᴇs ᴛᴏᴛᴀʟ | sᴀʟᴇsᴀᴍᴏᴜɴᴛ. */
+Este repositório contém diversos scripts SQL desenvolvidos para o Microsoft SQL Server. Os scripts abrangem desde criação de tabelas, consultas otimizadas, gatilhos, procedimentos armazenados até funções e visualização de dados.
 
-SELECT TOP (100) *
-FROM FactSales
-ORDER BY SalesQuantity DESC
-```
+## 📂 Estrutura do Repositório
 
-#### ʀᴇsᴏʟᴜᴛɪᴏɴ ɪɪ. 
-```sql
+- `DDL/` - Scripts para criação de tabelas, índices e outras estruturas do banco de dados.
+- `DML/` - Scripts para inserção, atualização e remoção de dados.
+- `Queries/` - Consultas SQL para extração de informações.
+- `StoredProcedures/` - Procedimentos armazenados para automação de tarefas.
+- `Functions/` - Funções definidas pelo usuário para otimização de código.
+- `Triggers/` - Gatilhos para execução automática de eventos.
 
-/* ᴛʜᴇ ᴛᴏᴘ ᴛᴇɴ ᴘʀᴏᴅᴜᴄᴛs ᴡɪᴛʜ ᴀ ʜɪɢʜᴇsᴛ ᴜɴɪᴛ ᴘʀɪᴄᴇ ʜᴀᴠᴇ ᴇxᴀᴄᴛʟʏ ᴛʜᴇ sᴀᴍᴇ ᴘʀɪᴄᴇ, ᴀʟᴛʜᴏᴜɢʜ,
-ᴛʜᴇ ᴄᴏᴍᴘᴀɴʏ ᴡᴀɴᴛs ᴛᴏ ᴅɪғғᴇʀᴇɴᴛɪᴀᴛᴇ ᴛʜɪs ᴘʀɪᴄᴇs ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴇᴀᴄʜ ᴡᴇɪɢʜᴛ, ᴡᴇ ɴᴇᴇᴅ ᴛᴏ ᴏʀᴅᴇʀ
-ᴛʜɪs ᴛᴏᴘ ᴛᴇɴ ᴘʀᴏᴅᴜᴄᴛs, ᴀᴄᴄᴏʀɪᴅɪɴɢ ᴛᴏ ᴛʜᴇ ᴜɴɪᴛ ᴘʀɪᴄᴇ ᴄᴏʟᴜᴍɴ, ғᴜʀᴛʜᴇʀᴍᴏʀᴇ,
-ᴇsᴛᴀʙʟɪsʜᴍᴇɴᴛ ᴏғ ᴀ ᴛɪᴇʙʀᴇᴀᴋᴇʀ ᴄʀɪᴛᴇʀɪᴏɴ, sᴏ ᴛʜᴀᴛ ɪᴛ ɪs sʜᴏᴡɴ ɪɴ ᴏʀᴅᴇʀ, 
-ғʀᴏᴍ ʟᴀʀɢᴇsᴛ ᴛᴏ sᴍᴀʟʟᴇsᴛ. ɪɴ ᴄᴀsᴇ ᴛʜᴇʀᴇ ɪs sᴛɪʟʟ ᴀ ᴛɪᴇ ʙᴇᴛᴡᴇᴇɴ ᴛʜᴇ ᴛᴡᴏ ᴏʀ ᴍᴏʀᴇ ᴘʀᴏᴅᴜᴄᴛs,
-ᴛʜɪɴᴋ ᴏғ ᴀ ᴡᴀʏ ғᴏʀ ᴄʀᴇᴀᴛᴇ ᴀ sᴇᴄᴏɴᴅ ᴄʀɪᴛᴇʀɪᴏɴ ᴏғ ᴀ ᴛɪᴇʙʀᴇᴀᴋ ʙᴇsɪᴅᴇ ᴛʜᴇ ᴡᴇɪɢʜᴛ. */
+## 🛠 Requisitos
 
-SELECT TOP (10) *
-FROM DimProduct
-ORDER BY
-	UnitPrice DESC,
-	Weight DESC,
-	AvailableForSaleDate ASC
-```
-#### ʀᴇsᴏʟᴜᴛɪᴏɴ ɪɪɪ. 
-```sql
-/* ʏᴏᴜ ᴀʀᴇ ʀᴇsᴘᴏɴsɪʙʟᴇ ғᴏʀ ᴛʜᴇ sᴇᴄᴛᴏʀ ᴏғ ʟᴏɢɪsᴛɪᴄ ᴏғ ᴛʜᴇ ᴄᴏᴍᴘᴀɴʏ ᴄᴏɴᴛᴏsᴏ ᴀɴᴅ ɴᴇᴇᴅs ᴅɪᴍᴇɴsɪᴏɴ
-ᴛʜᴇ ᴛʀᴀɴsᴘᴏʀᴛ ᴏғ ᴛʜᴇ ᴀʟʟ ᴘʀᴏᴅᴜᴄᴛs ɪɴ ᴄᴀᴛᴇɢᴏʀɪᴇs, ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴛʜᴇ ᴡᴇɪɢʜᴛ.
-ᴛʜᴇ ᴘʀᴏᴅᴜᴄᴛs ᴏғ "ᴀ" ᴄᴀᴛᴇɢᴏʀʏ ᴡɪᴛʜ ᴛʜᴇ ᴡᴇɪɢʜᴛ ᴀʙᴏᴠᴇ ᴏɴᴇ ʜᴜɴᴅʀᴇᴅ ᴋɪʟᴏs, sʜᴏᴜʟᴅ ʙᴇ ᴛʀᴀɴsᴘᴏʀᴛᴇᴅ
-ɪɴ ᴛʜᴇ ғɪʀsᴛ ʙᴀᴛᴄʜ, ᴍᴀᴋᴇ ᴀ ᴄᴏɴsᴜʟᴛ ɪɴ ᴛʜᴇ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ᴅᴇsᴄᴏᴠᴇʀʏ ᴡɪᴄʜ ᴀʀᴇ ᴛʜᴇ ᴘʀᴏᴅᴜᴄᴛs ᴛʜᴀᴛ ᴀʀᴇ ɪɴ
-"ᴀ ᴄᴀᴛᴇɢᴏʀʏ".
+- Microsoft SQL Server (versão 2016 ou superior recomendada)
+- SQL Server Management Studio (SSMS) ou outra ferramenta compatível
 
-ᴀ) ʏᴏᴜ'ʟʟ sʜᴏᴜʟᴅ ʀᴇᴛᴜʀɴ ᴊᴜsᴛ ᴛʜᴇ ᴄᴏʟᴜᴍɴs ɪɴ ᴛʜɪs ᴏ̨ᴜᴇʀʏ: [ᴘʀᴏᴅᴜᴄᴛ ɴᴀᴍᴇ] [ᴡᴇɪɢʜᴛ]. 
+## 🚀 Como Usar
 
-ʙ) ʀᴇɴᴀᴍᴇ ᴛʜɪs ᴄᴏʟᴜᴍɴs ᴡɪᴛʜ ᴀ ɪɴᴛᴜɪᴛɪᴠᴇ ɴᴀᴍᴇ.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+2. Acesse a pasta desejada e abra o arquivo `.sql` correspondente.
+3. Execute o script no SQL Server Management Studio ou outra ferramenta SQL.
 
-ᴄ) ᴏʀᴅᴇʀ ᴛʜᴇ ᴘʀᴏᴅᴜᴄᴛs ғʀᴏᴍ ᴛʜᴇ ᴡᴇɪɢʜᴛɪᴇsᴛ ғᴏʀ ʟɪɢʜᴛᴇʀ.*/
+## 📌 Contribuição
 
-SELECT 
-	ProductName as 'Nome do Produto',
-	Weight as 'Peso'
-FROM DimProduct
-WHERE WEIGHT >= 100
-ORDER BY WEIGHT DESC
-```
+Contribuições são bem-vindas! Para contribuir:
 
-#### ᴘʀᴏʙʟᴇᴍᴀ ɪᴠ.
-```sql
--- ᴠᴏᴄᴇ ғᴏɪ ᴀʟᴏᴄᴀᴅᴏ ᴘᴀʀᴀ ᴄʀɪᴀʀ ᴜᴍ ʀᴇʟᴀᴛᴏʀɪᴏ ᴅᴀs ʟᴏᴊᴀs ʀᴇɢɪsᴛʀᴀᴅᴀs ᴀᴛᴜᴀʟᴍᴇɴᴛᴇ ɴᴀ ᴄᴏɴᴛᴏsᴏ.
+1. Faça um fork do repositório.
+2. Crie uma branch com a sua funcionalidade ou correção: `git checkout -b minha-feature`.
+3. Faça as alterações e commit: `git commit -m 'Adiciona nova funcionalidade'`.
+4. Envie para o repositório remoto: `git push origin minha-feature`.
+5. Abra um Pull Request para revisarmos sua contribuição.
 
--- A. qᴜᴀɴᴛᴀs ʟᴏᴊᴀs ᴀ ᴇᴍᴘʀᴇsᴀ ᴛᴇᴍ ɴᴏ ᴛᴏᴛᴀʟ 
-SELECT  *
-FROM DimStore
+## 📜 Licença
 
--- B. ʀᴇᴛᴏɴᴀʀ ᴀs ᴄᴏʟᴜɴᴀs [sᴛᴏʀᴇɴᴀᴍᴇ], [ᴏᴘᴇɴᴅᴀᴛᴇ], [ᴇᴍᴘʟᴏʏᴇᴇᴄᴏᴜɴᴛ] ᴅᴀ ᴛᴀʙᴇʟᴀ [ᴅɪᴍsᴛᴏʀᴇ]
-SELECT 
-	StoreName,
-	OpenDate,
-	EmployeeCount
-FROM DimStore
+Este repositório está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
 
--- B. Renomear as colunas anteriores
-SELECT 
-	StoreName as 'Nome da Loja',
-	OpenDate as 'Data da Abertura',
-	EmployeeCount as 'Qtd Funcionários'
-FROM DimStore
+---
 
--- C. Descubrir dessas lojas quantas e quais estão mais ativas
-SELECT 
-	StoreName as 'Nome da Loja',
-	OpenDate as 'Data da Abertura',
-	EmployeeCount as 'Qtd Funcionários'
-FROM DimStore
-WHERE
-	StoreType = 'Store' AND
-	Status = 'On'
-```
-#### ᴘʀᴏʙʟᴇᴍᴀ ᴠ.
+Caso tenha alguma dúvida, fique à vontade para abrir uma issue ou entrar em contato!
 
-``` sql
-/*
-ᴏ ɢᴇʀᴇɴᴛᴇ ᴅᴀ ᴀʀᴇᴀ ᴅᴇ ᴄᴏɴᴛʀᴏʟᴇ ᴅᴇ ᴏ̨ᴜᴀʟɪᴅᴀᴅᴇ ɴᴏᴛɪғɪᴄᴏᴜ ᴀ̀ Cᴏɴᴛᴏsᴏ ᴏ̨ᴜᴇ ᴛᴏᴅᴏs ᴏs ᴘʀᴏᴅᴜᴛᴏs Hᴏᴍᴇ 
-Tʜᴇᴀᴛᴇʀ ᴅᴀ ᴍᴀʀᴄᴀ Lɪᴛᴡᴀʀᴇ, ᴅɪsᴘᴏɴɪʙɪʟɪᴢᴀᴅᴏs ᴘᴀʀᴀ ᴠᴇɴᴅᴀ ɴᴏ ᴅɪᴀ 15 ᴅᴇ ᴍᴀʀᴄ̧ᴏ ᴅᴇ 2009, ғᴏʀᴀᴍ 
-ɪᴅᴇɴᴛɪғɪᴄᴀᴅᴏs ᴄᴏᴍ ᴅᴇғᴇɪᴛᴏs ᴅᴇ ғᴀʙʀɪᴄᴀ.  
-
-ᴏ ᴏ̨ᴜᴇ ᴠᴏᴄᴇ̂ ᴅᴇᴠᴇʀᴀ ғᴀᴢᴇʀ ᴇ ɪᴅᴇɴᴛɪғɪᴄᴀʀ ᴏs ɪᴅ’s ᴅᴇssᴇs ᴘʀᴏᴅᴜᴛᴏs ᴇ ʀᴇᴘᴀssᴀʀ ᴀᴏ ɢᴇʀᴇɴᴛᴇ ᴘᴀʀᴀ ᴏ̨ᴜᴇ ᴇʟᴇ 
-ᴘᴏssᴀ ɴᴏᴛɪғɪᴄᴀʀ ᴀs ʟᴏᴊᴀs ᴇ ᴄᴏɴsᴇᴏ̨ᴜᴇɴᴛᴇᴍᴇɴᴛᴇ sᴏʟɪᴄɪᴛᴀʀ ᴀ sᴜsᴘᴇɴsᴀ̃ᴏ ᴅᴀs ᴠᴇɴᴅᴀs ᴅᴇssᴇs ᴘʀᴏᴅᴜᴛᴏs.
-*/
-
-SELECT 
-	*
-FROM
-	DimProduct
-WHERE
-	BrandName = 'Litware' AND
-	ProductName like '%Home Theater%' AND
-	availableForSaleDate = '20090315'
-
-```
